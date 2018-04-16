@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+        body,
+        html {
+            margin: 0;
+            background: #DDDDE5;
+        }
+
+        header {
+            padding: 10px;
+            margin-bottom: 30px;
+            background: #333640;
+        }
+
+        .name {
+            font-family: "Lato";
+            letter-spacing: 11px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .photo-line {
+            margin: 24px auto;
+            width: 1380px;
+            height: 200px;
+        }
+
+        .photo {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 400px;
+            margin: 24px;
+            height: 200px;
+            background: #fff;
+            border: 5px dotted #333640;
+            transition: all 0.7s ease-in-out 0.2s;
+        }
+
+        .photo:hover {
+            transform: scale(1.2, 1.2);
+
+        }
+        
+        .p1{
+            background: url("https://i.ytimg.com/vi/Vrwv0ySAn84/maxresdefault.jpg") 50%/cover;
+        }
+        .p2{
+            background: url("https://cdn.pixabay.com/photo/2016/02/19/11/51/world-trade-center-1210003__340.jpg") 50%/cover;
+        }
+        .p3{
+            background: url("https://cdn.pixabay.com/photo/2017/04/07/06/47/moscow-city-2210335__340.jpg") 50%/cover;
+        }
+        .p4{
+            background: url("http://alltop10.org/wp-content/uploads/2015/11/CHikago.jpg") 50%/cover;
+        }
+        .p5{
+            background: url("http://www.mytravelbook.org/object_foto/2017/08/Telebashnja_Guanchzhou_4.jpg") 50%/cover;
+        }
+        .p6{
+            background: url("http://glplanet.net/data_images/cityes/tianjin/tianjin-12.jpg") 50%/cover;
+        }
+        .p7{
+            background: url("http://2krota.ru/wp-content/uploads/2018/01/Cities_Shanghai_city_in_China_094392_.jpg") 50%/cover;
+        }
+        .p8{
+            background: url("https://cdn.pixabay.com/photo/2017/02/21/16/48/tokyo-2086596__340.jpg") 50%/cover;
+        }
+        .p9{
+            background: url("https://million-wallpapers.ru/wallpapers/2/23/335605385920455.jpg") 50%/cover;
+        }
+        footer{
+            margin-top: 48px;
+            padding: 20px;
+            background: #333640;
+            border-top: 7px solid #fff;
+        }
+        .footer-text{
+            font-family: "Lato";
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="name">PHOTO GALLERY</h1>
+    </header>
+    <main>
+        <section class="photo-line">
+            <div class="photo p1"></div>
+            <div class="photo p2"></div>
+            <div class="photo p3"></div>
+        </section>
+        <section class="photo-line">
+            <div class="photo p4"></div>
+            <div class="photo p5"></div>
+            <div class="photo p6"></div>
+        </section>
+        <section class="photo-line">
+            <div class="photo p7"></div>
+            <div class="photo p8"></div>
+            <div class="photo p9"></div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-text">Developer: Ivanov Fedor</p>
+    </footer>
+</body>
+
+</html>
