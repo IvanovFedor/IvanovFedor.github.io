@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab');
+
+@keyframes text-animation {
+    0% {
+        transform: translate(0, 100px);
+        color: transparent;
+    }
+    100% {
+        transform: translate(0, 0);
+        color: #F1F2F4;
+    }
+}
+
+@keyframes hr-animation {
+    0%{
+        width: 0;
+        background: #F1F2F4;
+    }
+    100% {
+        width: 500px;
+        background: #F1F2F4;
+    }
+}
+
+@keyframes photo-slides {
+    0%, 20% {
+        background: url("https://wallpapernow.net/web/wallpapers/colored-bikes_3840x2160.jpg") 50%/cover;
+    }
+
+    25%, 45% {
+        background: url("https://wallpaperscraft.com/image/bike_summer_spring_sun_mood_94030_3840x2160.jpg") 50%/cover;
+    }
+
+    50%, 70% {
+        background: url("https://best4kwallpapers.com/web/wallpapers/3000-bicycle-red-wall/3840x2160.jpg") 50%/cover;
+    }
+
+    75%, 100% {
+        background: url("https://wallpapernow.net/web/wallpapers/colored-bikes_3840x2160.jpg") 50%/cover;
+    }
+}
+
+body,
+html {
+    margin: 0;
+    font-family: "Roboto Slab";
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 12vh;
+    background: #213d64dd;
+    z-index: 9999;
+    font-family: "Raleway";
+    color: #F1F2F4;
+    border-bottom: 5px solid rgb(244, 146, 0);
+}
+.name{
+    display: inline-block;
+    color: #F1F2F4;
+    margin-left: 150px;
+}
+
+nav, .menu{
+    margin-left: 300px;
+    display: inline-block;
+    font-family: "Roboto Slab";
+}
+.menu{
+    margin: 0 20px;
+}
+a{
+    color: #F1F2F4;
+    transition: all 1s ease-in-out;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.section-photo, .shadow, .section-info,.section-photogallery {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.section-photo {
+    animation: photo-slides 20s ease-in-out infinite;
+}
+.shadow {
+    background: rgba(40, 45, 41, 0.5);;
+    z-index: 999;
+}
+
+.hr1{
+    animation: hr-animation 0.5s ease-in-out 1s forwards;
+    width: 500px;
+    height: 2px;
+    margin: 5px auto;
+    background: transparent;
+}
+.shadow > h1{
+    font-size: 5rem;
+    padding-top: 40vh;
+}
+.shadow > h1, h2 {
+    color: #F1F2F4;
+    animation: text-animation 1s ease-in-out 1;
+    margin: 0;
+    
+}
+
+.section-info, .section-photogallery{
+    width: 100%;
+    height: 88vh;
+    background: #F1F2F4;
+}
+
+.href {
+    position: absolute;
+    top: -12vh;
+    width: 100%;
+    height: 12vh;
+}
+
+.section-info > h1 {
+    padding-top: 70px;
+    margin: 0;
+}
+
+.section-photogallery > h1 {
+    padding-top: 70px;
+    margin: 0;
+}
+
+.case{
+    width: 80vw;
+    height: 500px;
+    margin: auto;
+}
+
+.case > article {
+    display: inline-block;
+    vertical-align: top;
+    width: 20vw;
+    height: 500px;
+    margin: 0 30px;
+}
+
+article > h3 {
+    margin-bottom: 20px;
+    background: #213d64;
+    color: #F1F2F4;
+    border-bottom: 5px solid #f59300;
+}
+
+article > p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #525252;
+    text-align: left;
+}
+
+.hr2 {
+    width: 0;
+    height: 2px;
+    margin: 5px auto;
+    background: #f59300;
+    transition: all 1s ease-in-out;
+}
+.section-info:hover > .hr2{
+    width: 400px;
+    height: 2px;
+}
+
+.hr3 {
+    width: 0;
+    height: 2px;
+    margin: 5px auto;
+    background: #f59300;
+    transition: all 1s ease-in-out;
+}
+
+.section-photogallery:hover > .hr3{
+    width: 400px;
+    height: 2px;
+}
+
+.photo-line {
+    margin: 24px auto;
+    width: 1380px;
+    height: 200px;
+}
+
+.photo {
+    display: inline-block;
+    width: 400px;
+    margin: 24px;
+    height: 200px;
+    background: #fff;
+    transition: all 0.7s ease-in-out 0.2s;
+}
+
+.photo:hover {
+    transform: scale(1.2, 1.2);
+
+}
+
+.p1{
+    background: url("http://www.yugopolis.ru/data/img/0abf9fbfd63df346b4a71275cd7b1a56/205726.jpg") 50%/cover;
+}
+.p2{
+    background: url("http://bikenroll.by/wp-content/uploads/2018/02/serwis-front-1024x462.jpg") 50%/cover;
+}
+.p3{
+    background: url("http://www.alienbike.ru/sites/default/files/styles/large/public/alienbike-5_0.jpg") 50%/cover;
+}
+.p4{
+    background: url("http://www.alienbike.ru/sites/default/files/styles/large/public/alienbike-41.jpg") 50%/cover;
+}
+.p5{
+    background: url("https://i.ytimg.com/vi/bOOLwjoVeG8/maxresdefault.jpg") 50%/cover;
+}
+.p6{
+    background: url("http://static.orgpage.ru/newsphotos/18/1812072f050d49689b0b39301647b311.jpg") 50%/cover;
+}
+
+.contacts {
+    box-sizing: border-box;
+    padding: 10vh 150px;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #213d64;
+
+}
+
+.map {
+    display: inline-block;
+    width: 30vw;
+    height: 30vh;
+    background: url("https://4.downloader.disk.yandex.ru/preview/39dc9c3cf1d17d41ecb0cc612d6c1c3a19207ab710f04ee5c96a5b668e9f6e01/inf/6kueNlUYMB-oUX6Z0OKl0SkOUZBUFinRWR1zh4UZ6asQ9S7fUmB2Kv-w4UpoGCeEzpk1X30rAwwDgHYamp7pTw%3D%3D?uid=349501274&filename=Без%20названия_23-04-2018_09-57-18.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=1280x626") 50%/cover;
+    border: 5px solid #f59300;
+}
+.contacts > .info {
+    margin: 0;
+    margin-left: 150px;
+    vertical-align: top;
+    display: inline-block;
+}
+.info > h1, p {
+    font-size: 120%;
+    color: #F1F2F4;
+    margin: 0;
+    line-height: 30px;
+
+}
+.info > h1{
+    font-size: 200%;
+    margin-bottom: 15px;
+}
+footer{
+    padding: 15px 150px;
+    padding-top: 0;
+    background: #213d64;
+}
