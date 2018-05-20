@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 @keyframes text-animation {
     0% {
@@ -11,260 +11,529 @@
     }
 }
 
-@keyframes hr-animation {
-    0%{
-        width: 0;
-        background: #F1F2F4;
-    }
-    100% {
-        width: 500px;
-        background: #F1F2F4;
-    }
-}
 
-@keyframes photo-slides {
-    0%, 20% {
-        background: url("https://wallpapernow.net/web/wallpapers/colored-bikes_3840x2160.jpg") 50%/cover;
-    }
-
-    25%, 45% {
-        background: url("https://wallpaperscraft.com/image/bike_summer_spring_sun_mood_94030_3840x2160.jpg") 50%/cover;
-    }
-
-    50%, 70% {
-        background: url("https://best4kwallpapers.com/web/wallpapers/3000-bicycle-red-wall/3840x2160.jpg") 50%/cover;
-    }
-
-    75%, 100% {
-        background: url("https://wallpapernow.net/web/wallpapers/colored-bikes_3840x2160.jpg") 50%/cover;
-    }
-}
-
-body,
-html {
+body, html {
+    color: #353535;
+    font-family: "Montserrat";
     margin: 0;
-    font-family: "Roboto Slab";
+}
+.header-copy{
+    width: 100%;
+    height: 12vh;
 }
 
 header {
+    z-index: 9999;    
+    background: #FFFEFD;
     position: fixed;
-    width: 100vw;
+    box-shadow: 0px 4px 10px -8px #000D;
     height: 12vh;
-    background: #213d64dd;
-    z-index: 9999;
-    font-family: "Raleway";
-    color: #F1F2F4;
-    border-bottom: 5px solid rgb(244, 146, 0);
+    width: 100%;      
 }
-.name{
+.container > h1 > strong {
+    padding: 2px;
+    font-weight: bold;
+    background: #FF9562;
+    /* border-radius: 1px; */
+    color: #FFFEFD;
+}
+.container > h1 {
+    font-size: 2rem;
     display: inline-block;
-    color: #F1F2F4;
-    margin-left: 150px;
+    vertical-align: top;
+    font-weight: inherit;
+    padding: 2.5vh;
+    margin: 0;
 }
 
-nav, .menu{
-    margin-left: 300px;
+.main-menu {  
+    bottom: 0;
+    width: 80vw;
+    height: 88vh;
+    position: fixed;
+    left: -81vw;
+    background: #FFFEFD;
+    transition: 0.7s;
+    box-shadow: 4px -4px 10px -8px #000D;
+}
+.menu-open {
+    position: absolute;
     display: inline-block;
-    font-family: "Roboto Slab";
+    right: 6vw;
+    width: 30px;
+    padding: 3.5vh 0;
+    height: 5vh;
 }
-.menu{
-    margin: 0 20px;
+.main-menu_open {
+    left: 0;
 }
-a{
-    color: #F1F2F4;
-    transition: all 1s ease-in-out;
+.btn_element {
+    box-sizing: border-box;
+    margin: 3px auto;
+    width: 25px;
+    height: 5px;
+    background: #353535;
+    border-radius: 2px;
+}
+
+nav > ul > li {
+    padding:  0;
+    list-style-type: none;
+    margin: 1vh 0;
+}
+nav > ul {
+    margin-left: 0; 
+    padding-left: 0; 
+}
+.menu-item {
+    display: block;
+    color: #353535;
+    font-size: 1.3rem;
+    padding: 1.1vh 7vw;
     text-decoration: none;
 }
 
-a:hover{
-    text-decoration: underline;
+.menu-item:target {
+    color: #FFFEFD;
+    background: #FF9562;
 }
 
-.section-photo, .shadow, .section-info,.section-photogallery {
-    position: relative;
-    text-align: center;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 100vh;
-}
-
-.section-photo {
-    animation: photo-slides 20s ease-in-out infinite;
-}
-.shadow {
-    background: rgba(40, 45, 41, 0.5);;
-    z-index: 999;
-}
-
-.hr1{
-    animation: hr-animation 0.5s ease-in-out 1s forwards;
-    width: 500px;
-    height: 2px;
-    margin: 5px auto;
-    background: transparent;
-}
-.shadow > h1{
-    font-size: 5rem;
-    padding-top: 40vh;
-}
-.shadow > h1, h2 {
-    color: #F1F2F4;
-    animation: text-animation 1s ease-in-out 1;
-    margin: 0;
-    
-}
-
-.section-info, .section-photogallery{
-    width: 100%;
-    height: 88vh;
-    background: #F1F2F4;
-}
-
-.href {
+.menu-href{
+    display: block;
     position: absolute;
     top: -12vh;
-    width: 100%;
-    height: 12vh;
 }
 
-.section-info > h1 {
-    padding-top: 70px;
+.slider_h1{
     margin: 0;
+    font-size: 3rem;
+    margin-top: 40%;
+    z-index: 999;
+    text-align: center;
+}
+.slider_h4{
+    font-size: 1.5rem;   
+}
+.slider_h1, .slider_h4{
+    color: #FFFEFD;
+    animation: text-animation 1s ease-in-out 1;
 }
 
-.section-photogallery > h1 {
-    padding-top: 70px;
-    margin: 0;
+.call{
+    padding: 3vh 0 0 0;
 }
-
-.case{
-    width: 80vw;
-    height: 500px;
+.call > a{
+    color: #353535;
+    display: block;
+    width: 80%;
+    text-align: center;
     margin: auto;
+    text-decoration: none;
+    background: #FCFBFA;
+    padding: 2vh 2vw;
+    border: 0.2px solid #35353544;
+    /* box-shadow: 0px 0px 10px -4px #000D; */
+    transition: 0.5s;
 }
 
-.case > article {
-    display: inline-block;
-    vertical-align: top;
-    width: 20vw;
-    height: 500px;
-    margin: 0 30px;
+.call > a:target, a:hover {
+    color: #FFFEFD;
+    background: #FF9562;
 }
-
-article > h3 {
-    margin-bottom: 20px;
-    background: #213d64;
-    color: #F1F2F4;
-    border-bottom: 5px solid #f59300;
-}
-
-article > p {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #525252;
-    text-align: left;
-}
-
-.hr2 {
-    width: 0;
-    height: 2px;
-    margin: 5px auto;
-    background: #f59300;
-    transition: all 1s ease-in-out;
-}
-.section-info:hover > .hr2{
-    width: 400px;
-    height: 2px;
-}
-
-.hr3 {
-    width: 0;
-    height: 2px;
-    margin: 5px auto;
-    background: #f59300;
-    transition: all 1s ease-in-out;
-}
-
-.section-photogallery:hover > .hr3{
-    width: 400px;
-    height: 2px;
-}
-
-.photo-line {
-    margin: 24px auto;
-    width: 1380px;
-    height: 200px;
-}
-
-.photo {
-    display: inline-block;
-    width: 400px;
-    margin: 24px;
-    height: 200px;
-    background: #fff;
-    transition: all 0.7s ease-in-out 0.2s;
-}
-
-.photo:hover {
-    transform: scale(1.2, 1.2);
-
-}
-
-.p1{
-    background: url("http://www.yugopolis.ru/data/img/0abf9fbfd63df346b4a71275cd7b1a56/205726.jpg") 50%/cover;
-}
-.p2{
-    background: url("http://bikenroll.by/wp-content/uploads/2018/02/serwis-front-1024x462.jpg") 50%/cover;
-}
-.p3{
-    background: url("http://www.alienbike.ru/sites/default/files/styles/large/public/alienbike-5_0.jpg") 50%/cover;
-}
-.p4{
-    background: url("http://www.alienbike.ru/sites/default/files/styles/large/public/alienbike-41.jpg") 50%/cover;
-}
-.p5{
-    background: url("https://i.ytimg.com/vi/bOOLwjoVeG8/maxresdefault.jpg") 50%/cover;
-}
-.p6{
-    background: url("http://static.orgpage.ru/newsphotos/18/1812072f050d49689b0b39301647b311.jpg") 50%/cover;
-}
-
-.contacts {
-    box-sizing: border-box;
-    padding: 10vh 150px;
-    position: relative;
+    /* Начало слайдера */
+.shadow{
+    height: 100%;
     width: 100%;
-    height: 50vh;
-    background: #213d64;
-
+    position: absolute;
+    z-index: 10;
+    background: #35353588;
 }
 
-.map {
-    display: inline-block;
-    width: 30vw;
-    height: 30vh;
-    background: url("https://4.downloader.disk.yandex.ru/preview/39dc9c3cf1d17d41ecb0cc612d6c1c3a19207ab710f04ee5c96a5b668e9f6e01/inf/6kueNlUYMB-oUX6Z0OKl0SkOUZBUFinRWR1zh4UZ6asQ9S7fUmB2Kv-w4UpoGCeEzpk1X30rAwwDgHYamp7pTw%3D%3D?uid=349501274&filename=Без%20названия_23-04-2018_09-57-18.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=1280x626") 50%/cover;
-    border: 5px solid #f59300;
+.slide {
+    width: 100%;
+    height: 78vh;
+    position: relative;
+    text-align: center;
 }
-.contacts > .info {
-    margin: 0;
-    margin-left: 150px;
-    vertical-align: top;
-    display: inline-block;
-}
-.info > h1, p {
-    font-size: 120%;
-    color: #F1F2F4;
-    margin: 0;
-    line-height: 30px;
 
+	.slide  input  {
+        display: none;
+    }
+
+    .slide  input + label {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid #FFFEFD;
+        cursor: pointer;
+        position: relative;
+        top: 85%;
+        z-index: 100;
+        margin: 0 8px;
+    }
+
+    .slide{transition: all 0.8s ease-out 0s;}
+
+    .slide  input + label:hover {
+        background: #FF9562DD;
+    }
+
+    .slide  input:checked + label {
+        background: #FF9562DD;
+    }
+	
+    .slide  .photo-header {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+	
+    .slide  .photo-header {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+    }
+
+    .slide  input:checked + label + .photo-header {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+    }
+
+    .photo-header{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .ph1{
+        background: url("https://cdn.pixabay.com/photo/2018/05/16/05/44/achievement-3404945_1280.jpg") 50%/cover;
+    }
+    .ph2{
+        background: url("./imgs/table-3268746_1280.jpg") 50%/cover;
+    }
+    .ph3{
+        background: url("https://cdn.pixabay.com/photo/2014/12/26/13/22/coupons-580420_1280.jpg") 50%/cover;
+    }
+    /* конец слайдера */
+
+    /* Начало статьи ВНИМАНИЕ */
+    .attention{   
+        background: #FF9562;
+    }
+    .attention > h1{
+        font-size: 1.1rem;
+        font-weight: normal;
+        line-height: 30px;
+        text-align: center;
+        color: #FCFBFA;
+        margin: 0;
+        padding: 10vh 4vw;
+        padding-bottom: 0;
+    }
+    .attention > h1 > strong{
+        font-weight: bold;
+    }
+    .attention > h1 > cite{
+        color: #353535;
+        line-height: 3vh;
+        font-size: 1rem;
+        font-style: normal;
+    }
+    .attention > div{
+        padding: 3vh 0 10vh 0;
+    }
+    .attention > div > a{
+        color: #353535;
+        display: block;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        text-decoration: none;
+        background: #FCFBFA;
+        padding: 2vh 2vw;
+        transition: 0.5s;
+    }
+
+    .attention > div > a:hover{
+        color: #FFFEFD;
+        background: #353535;
+    }
+    /* Конец статьи ВНИМАНИЕ */
+    /* Начало статьи About */
+    .about{
+        position: relative;
+        background: url("./imgs/organic-1280537_1280.jpg") 50%/cover;
+        height: 88vh;
+        width: 100%;
+    }
+    .about > .about-bg{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 80%;
+        height: 80%;
+        background: #FCFBFA;
+    }
+    .about > .about-bg > p{
+        line-height: 180%;
+        padding: 1vh 7vw;
+        font-size: 0.8rem;
+    }
+    .about > .about-bg > p > cite{
+        line-height: 350%;
+        font-size: 0.67rem;
+        font-style: normal;
+    }
+    
+    .about > .about-bg > p > strong{
+        font-size: 1.3rem;
+        font-weight: normal;
+    }
+    .about > .about-bg > p > strong > em{
+        color: #FFFEFD;
+        font-weight: bold;
+        font-style: normal;
+        background: #FF9562;
+        padding: 2px;
+    }
+    /* Конец статьи About */
+    /* Начало статьи Offer */
+    .offer{
+        background: #FCFBFA;
+    }
+    /* Конец статьи Offer */
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 700px){
+    .header-copy{
+        height: 10vh;
+    }
+    header {
+        height: 10vh;
+    }
+    header > h1 {
+        font-size: 2.5rem;
+    }
+    .menu-href{
+        top: -10vh;
+    }
+    .main-menu {  
+        width: 40vw;
+        height: 90vh;
+    }
+    .btn_element {
+        margin: auto;
+        margin-top: 4px;
+        width: 35px;
+        height: 7px;
+        background: #353535;
+        border-radius: 3px;
+    }
+    .menu-open {
+        position: absolute;
+        display: inline-block;
+        right: 6vw;
+        width: 30px;
+        padding: 3vh 0;
+        height: 4vh;
+    }
+
+    .call > a{
+        width: 70%;
+    }
+
+
+    .slide  input + label {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+    }
+
+    .slider_h1{
+        font-size: 4rem;
+    }
+    .slider_h4{
+        font-size: 2.5rem;   
+    }
+    /* !!! */
+    .attention > h1{
+        line-height: 50px;
+        font-size: 2rem;
+        padding-top: 12vh;
+    }
+    .attention > h1 > cite{
+        line-height: 3vh;
+        font-size: 1.9rem;
+    }
+    .attention > div > a{
+        width: 35%;
+    }
+    /* Начало статьи About */
+    .about{
+        height: 90vh;
+    }
+    .about > .about-bg{
+        top: 15%;
+        right: 15%;
+        width: 70%;
+        height: 70%;
+    }
+    .about > .about-bg > p{
+        line-height: 180%;
+        padding: 1vh 6vw;
+        font-size: 1.3rem;
+    }
+    .about > .about-bg > p > cite{
+        line-height: 350%;
+        font-size: 0.97rem;
+    }
+    
+    .about > .about-bg > p > strong{
+        font-size: 1.8rem;
+    }
+    /* Конец статьи About */
 }
-.info > h1{
-    font-size: 200%;
-    margin-bottom: 15px;
-}
-footer{
-    padding: 15px 150px;
-    padding-top: 0;
-    background: #213d64;
+
+@media (min-width: 1366px){
+    .container{
+        margin: auto;
+    }
+    header {
+        height: 10vh;
+    }
+    .container > h1 {
+        padding: 2.5vh 6vw;
+    }
+    .menu-open {
+        display: none;
+    }
+    .main-menu {
+        display: inline-block;          
+        width: auto;
+        height: auto;
+        position: static;
+        background: none;
+        transition: none;
+        box-shadow: none;
+    }
+    
+    nav > ul > li {
+        display: inline-block;
+        padding:  0;
+        list-style-type: none;
+        margin: 0 0;
+    }
+    nav > ul {
+        display: inline-block;
+        margin: 0; 
+        padding: 0; 
+    }
+    .menu-item {
+        display: block;
+        color: #353535;
+        font-size: 1.3rem;
+        height: 4vh;
+        padding: 3vh;
+        text-decoration: none;
+    }
+    .menu-item:hover{
+        color: #353535;
+        background: none;
+        text-decoration: underline;
+    }
+
+    .call{
+        position: absolute;
+        right: 6vw;
+        display: inline-block;
+        vertical-align: top;
+        padding: 3.8vh 0;
+    }
+    .call > a{
+        color: #353535;
+        display: inline;
+        text-align: center;
+        margin: auto;
+        text-decoration: none;
+        background: #FCFBFA;
+        padding: 2vh 2vw;
+        border: 0.2px solid #35353544;
+        /* box-shadow: 0px 0px 10px -4px #000D; */
+        transition: 0.5s;
+    }
+    
+    .call > a:target, a:hover {
+        color: #FFFEFD;
+        background: #FF9562;
+    }
+
+    .slide {
+        height: 90vh;
+    }
+    .slide  input + label {
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+    }
+
+    .slider_h1{
+        margin-top: 15%;
+    }
+    /* Начало статьи ВНИМАНИЕ */
+    .attention > h1{
+        width: 70%;
+        display: inline-block;
+        font-size: 2.3rem;
+        text-align: left;
+        padding: 15vh 4vw;
+    }
+    .attention > h1 > cite{
+        font-size: 2.1rem;
+    }
+    .attention > div{
+        display: inline-block;
+        vertical-align: text-bottom;   
+    }
+    .attention > div > a{
+        width: 100%;
+    }
+    /* Конец статьи ВНИМАНИЕ */
+        /* Начало статьи About */
+        .about{
+            height: 90vh;
+        }
+        .about > .about-bg{
+            top: 10%;
+            left: 10%;
+            width: 40%;
+            height: 80%;
+        }
+        .about > .about-bg > p{
+            line-height: 180%;
+            padding: 1vh 4vw;
+            font-size: 1.1rem;
+        }
+        .about > .about-bg > p > cite{
+            line-height: 350%;
+            font-size: 0.77rem;
+            font-style: normal;
+        }
+        
+        .about > .about-bg > p > strong{
+            font-size: 1.6rem;
+            font-weight: normal;
+        }
+        /* Конец статьи About */
+
 }
